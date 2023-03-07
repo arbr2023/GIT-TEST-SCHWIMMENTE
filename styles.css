@@ -1,0 +1,253 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(209, 201, 201);
+}
+
+.header {
+    display: flex;
+    background-color: rgb(209, 201, 201);
+}
+
+.logo {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+    padding: 10px;
+}
+.header > .nav-bar {
+    display: flex;
+    width: 60%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.hero-top {
+    background-image: url("./imgs/mood-vector-background.jpg");
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    border:hsl(0, 0%, 80%) solid 2px;
+}
+
+.hero-top > .inner > button {
+    background-color: rgb(112, 213, 234);
+    padding: 15px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 1px 1px 10px rgb(169, 161, 161);
+}
+
+.hero-top > .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto 200px 150px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.impressions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.impressions > .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.slider-container {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    transform-origin: center center;
+    transform: scale(1);
+    scroll-snap-align: center;
+}
+
+.slides > img {
+    height: 220px;
+    width: auto;
+    margin-bottom: 5px;
+} 
+
+/* Custom scrollbar because I was too stupid for a carousel. */
+.slides::-webkit-scrollbar {
+    width: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background:  rgb(185, 233, 242);
+    border-radius: 20px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: rgb(112, 213, 234);
+    border-radius: 20px;
+    border: rgb(89, 206, 230) 1px solid;
+}
+
+.slides::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 60%);
+}
+
+/* End of custom scrollbar. */
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    margin: 70px 400px;
+    background-color: rgb(185, 233, 242);
+}
+
+.booking > .bottom {
+    display: flex;
+    height: 300px;
+    width: 90%;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.booking > .bottom > .placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px 0 50px;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid hsla(189, 69%, 84%, 0.9) 5px;
+    border-radius: 30px;
+    margin: 80px 50px;
+    gap: 100px;
+    background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.about > .left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 50px;
+}
+
+.about > .left > .imgs > img {
+    height: auto;
+    width: 220px;
+    border-radius: 20px;
+}
+
+.about > .left > .imgs {
+    margin-top: 50px;;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about > .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 20px;
+    padding: 50px;
+}
+
+.about > .right > img {
+    height: auto;
+    width: 400px;
+    border-radius: 250px;
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    background-color: white;
+}
+
+.partners > .bottom {
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgb(209, 201, 201);
+    font-size: small;
+}
